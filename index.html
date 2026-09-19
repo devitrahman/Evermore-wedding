@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<script>
+/* ===== EDIT HERE: শুধু এই তথ্যগুলো পরিবর্তন করুন ===== */
+const WEDDING = {
+  groom: "রহমান মিয়া",
+  bride: "সুরাইয়া আক্তার",
+  dateText: "৩০ নভেম্বর ২০২৬",
+  dayText: "সোমবার",
+  timeText: "বিকাল ২:০০",
+  venue: "শেখেরকান্দি",
+  address: "বাঞ্ছারামপুর - শেখেরকান্দি",
+  whatsapp: "", 
+  musicFile: "music/wedding-music.mp3",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=Shekherkandi%2C%20Bancharampur%2C%20Bangladesh",
+  countdown: "2026-11-30T14:00:00+06:00"
+};
+/* ================================================ */
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>রহমান & সুরাইয়া — শুভ বিবাহ</title>
+<meta name="description" content="রহমান মিয়া ও সুরাইয়া আক্তারের শুভ বিবাহের নিমন্ত্রণ।">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root{
+  --gold:#a85b68;
+  --gold2:#e6b86a;
+  --cream:#fff8f1;
+  --black:#3a1823;
+  --soft:#5a2735;
+  --rose:#f1d6d9;
+  --ivory:#fff8f1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--black);color:var(--cream);
+  font-family:'Noto Serif Bengali',serif;line-height:1.8;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;
+  background-image:radial-gradient(#fff 0.5px,transparent .5px);
+  background-size:7px 7px;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1050px,92%);margin:auto}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;padding:55px 15px;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(216,177,90,.16),transparent 25%),
+    radial-gradient(circle at 85% 85%,rgba(216,177,90,.12),transparent 28%),
+    linear-gradient(145deg,#050505,#17130d 50%,#050505);
+}
+.frame{
+  width:min(900px,100%);padding:48px 28px;border:1px solid rgba(216,177,90,.7);
+  position:relative;box-shadow:0 0 55px rgba(216,177,90,.09), inset 0 0 50px rgba(216,177,90,.04);
+}
+.frame:before,.frame:after{
+  content:"";position:absolute;width:45px;height:45px;border:2px solid var(--gold);
+}
+.frame:before{left:-7px;top:-7px;border-right:0;border-bottom:0}
+.frame:after{right:-7px;bottom:-7px;border-left:0;border-top:0}
+.bismillah{font-size:2rem;color:var(--gold2);margin-bottom:14px}
+.kicker{letter-spacing:3px;color:#d9cba8;font-size:.85rem}
+h1{
+  font-family:'Playfair Display','Noto Serif Bengali',serif;
+  font-size:clamp(3rem,9vw,6.8rem);line-height:1.05;margin:22px 0 18px;
+  color:var(--gold2);font-weight:700;
+}
+.names{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:600}
+.amp{color:var(--gold);font-family:'Playfair Display',serif;font-size:1.7em;margin:0 10px}
+.date{margin:25px auto 8px;font-size:1.2rem;color:var(--gold2)}
+.venue{font-size:1rem;color:#ddd0b4}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-block;padding:10px 22px;border:1px solid var(--gold);border-radius:30px;
+  color:var(--cream);background:rgba(216,177,90,.08);transition:.25s
+}
+.btn:hover{background:var(--gold);color:#111}
+.section{padding:85px 0}
+.section.alt{background:linear-gradient(180deg,#0a0a09,#12100c,#0a0a09)}
+.title{text-align:center;color:var(--gold2);font-size:2rem;margin:0 0 12px}
+.subtitle{text-align:center;color:#c8bea6;max-width:650px;margin:0 auto 42px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:rgba(255,255,255,.025);border:1px solid rgba(216,177,90,.28);
+  padding:28px;text-align:center;border-radius:16px
+}
+.icon{font-size:2rem;color:var(--gold);margin-bottom:10px}
+.card h3{margin:5px 0 7px;color:var(--gold2)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:30px auto 0}
+.time{border:1px solid rgba(216,177,90,.35);padding:18px 8px;border-radius:12px;background:#0c0b09}
+.time strong{display:block;font-family:'Playfair Display',serif;color:var(--gold2);font-size:2rem}
+.time span{font-size:.85rem;color:#bdb19a}
+.quote{
+  max-width:760px;margin:auto;text-align:center;font-size:1.35rem;color:#eee3cc;
+  padding:35px;border-left:1px solid var(--gold);border-right:1px solid var(--gold)
+}
+.footer{text-align:center;padding:45px 15px;border-top:1px solid rgba(216,177,90,.2);color:#a99d86}
+@media(max-width:700px){
+  .frame{padding:38px 16px}.grid{grid-template-columns:1fr}.countdown{grid-template-columns:repeat(2,1fr)}
+  .section{padding:65px 0}.bismillah{font-size:1.45rem}
+}
+
+.gallery-note,.rsvp{max-width:720px;margin:0 auto;text-align:center}
+.gallery-note{padding:35px;border:1px solid rgba(216,177,90,.28);border-radius:16px;background:rgba(255,255,255,.025)}
+.rsvp{display:grid;gap:14px}
+.rsvp input,.rsvp select,.rsvp textarea{
+  width:100%;padding:13px 15px;border-radius:10px;border:1px solid rgba(216,177,90,.35);
+  background:#0c0b09;color:#fff8e8;font:inherit;outline:none
+}
+.rsvp textarea{min-height:110px;resize:vertical}
+.rsvp select option{background:#111}
+.rsvp button{cursor:pointer;font:inherit}
+.music-btn{
+  position:fixed;right:18px;bottom:18px;z-index:10;padding:10px 16px;border-radius:30px;
+  border:1px solid var(--gold);background:#0c0b09;color:var(--cream);cursor:pointer;
+  box-shadow:0 5px 25px rgba(0,0,0,.35)
+}
+
+
+:root{--gold:#a85b68;--gold2:#e6b86a;--cream:#fff8f1;--black:#3a1823;--soft:#5a2735;--rose:#f1d6d9;--ivory:#fff8f1}
+body{overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;z-index:-3;background-image:linear-gradient(rgba(58,24,35,.76),rgba(58,24,35,.88)),url('./assets/wedding-bg.jpg');background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;filter:saturate(.9)}
+.welcome{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at center,rgba(8,5,3,.52),rgba(3,3,3,.94) 78%),url("assets/first-logo-reference.webp") center 46%/min(620px,72vw) auto no-repeat,#080503;transition:opacity .8s,visibility .8s;overflow:hidden} .welcome:before{content:"";position:absolute;inset:0;background:url("assets/first-logo-reference.webp") center/contain no-repeat;opacity:.30;filter:drop-shadow(0 0 28px rgba(216,177,90,.28));transform:scale(1.02);pointer-events:none;animation:welcomeBg 7s ease-in-out infinite} .welcome:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(8,5,3,.22),rgba(8,5,3,.62));pointer-events:none}.welcome-card{position:relative;z-index:2}
+.welcome.hide{opacity:0;visibility:hidden;pointer-events:none}
+.welcome-card{width:min(760px,92%);padding:45px 24px;border:1px solid rgba(216,177,90,.55);border-radius:28px;background:rgba(8,7,5,.72);box-shadow:0 0 80px rgba(216,177,90,.14);backdrop-filter:blur(8px);animation:cardIn 1.1s ease both}
+.welcome-logo{width:min(360px,80%);margin:0 auto 15px;display:block;filter:drop-shadow(0 8px 22px rgba(216,177,90,.2));animation:floatLogo 4s ease-in-out infinite}
+.welcome-kicker{letter-spacing:4px;color:#d9cba8;font-size:.8rem}.welcome-title{font-size:clamp(2.1rem,7vw,4.5rem);color:var(--gold2);margin:8px 0;font-weight:700}.welcome-sub{color:#d9cdb5;margin:0 auto 25px}.enter-btn{border:1px solid var(--gold);border-radius:999px;padding:13px 32px;background:linear-gradient(135deg,rgba(216,177,90,.2),rgba(216,177,90,.05));color:#fff8e8;font:inherit;cursor:pointer;box-shadow:0 0 25px rgba(216,177,90,.12);transition:.3s}.enter-btn:hover{transform:translateY(-2px);background:rgba(216,177,90,.3)}
+.hero{min-height:100svh;background-image:linear-gradient(rgba(58,24,35,.55),rgba(58,24,35,.82)),url('./assets/wedding-bg.jpg');background-position:center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}
+.hero:before{content:"";position:absolute;inset:-8%;background:radial-gradient(circle at 50% 30%,rgba(216,177,90,.2),transparent 38%);animation:pulseGlow 5s ease-in-out infinite;pointer-events:none}.frame{backdrop-filter:blur(3px);background:rgba(0,0,0,.28);border-radius:22px}.logo{width:min(360px,78%);margin:0 auto 10px;display:block;filter:drop-shadow(0 8px 24px rgba(230,184,106,.22))}
+.names{font-family:'Noto Serif Bengali',serif;font-size:clamp(2rem,5vw,3.4rem);color:#fff4d4;text-shadow:0 4px 25px #000}.amp{font-size:1.2em}.parallax-bg{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:url('./assets/wedding-bg.jpg');background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.11;transform:scale(1.08);will-change:transform}
+.upload-box{border:1px dashed rgba(216,177,90,.55);border-radius:18px;padding:25px;background:rgba(255,255,255,.025)}.upload-box input{display:none}.upload-label{display:inline-block;cursor:pointer}.preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:18px}.preview-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:1px solid rgba(216,177,90,.25)}
+.guestbook{max-width:760px;margin:25px auto 0;display:grid;gap:12px}.guestbook-list{display:grid;gap:10px;margin-top:20px}.guest-message{padding:14px 16px;border:1px solid rgba(216,177,90,.22);border-radius:12px;background:rgba(255,255,255,.025)}.guest-message b{color:var(--gold2)}
+@keyframes cardIn{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:none}}@keyframes floatLogo{50%{transform:translateY(-7px)}}@keyframes pulseGlow{50%{opacity:.6;transform:scale(1.05)}}
+@media(max-width:700px){.welcome-card{padding:32px 16px}.hero{background-attachment:scroll}.parallax-bg{opacity:.08}}
+</style>
+</head>
+<body>
+<div class="parallax-bg" id="parallaxBg"></div>
+<div class="welcome" id="welcome">
+  <div class="welcome-card">
+    <div class="welcome-kicker">একটি ভালোবাসার নিমন্ত্রণ</div>
+    <img class="welcome-logo" src="assets/shubho-bibaho-logo.png" alt="শুভ বিবাহ">
+    <div class="welcome-title">স্বাগতম</div>
+    <p class="welcome-sub">রহমান মিয়া ও সুরাইয়া আক্তারের শুভ বিবাহের আয়োজনে আপনাকে আন্তরিক আমন্ত্রণ।</p>
+    <button class="enter-btn" onclick="enterInvitation()">💛 নিমন্ত্রণে প্রবেশ করুন</button>
+  </div>
+</div>
+
+
+<audio id="bgMusic" loop preload="none">
+  <source src="music/wedding-music.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵 Music</button>
+
+
+<header class="hero" id="home">
+  <div class="frame">
+    <img class="logo" src="assets/shubho-bibaho-logo.png" alt="শুভ বিবাহ">
+    <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <div class="kicker">শুভ বিবাহের নিমন্ত্রণ</div>
+    <h1>শুভ বিবাহ</h1>
+    <div class="names">
+      রহমান মিয়া <span class="amp">&amp;</span> সুরাইয়া আক্তার
+    </div>
+    <div class="date">৩০ নভেম্বর ২০২৬ · সোমবার · বিকাল ২:০০ ঘটিকায়</div>
+    <div class="venue">শেখেরকান্দি, বাঞ্ছারামপুর</div>
+    <div class="btns">
+      <a class="btn" href="#details">বিস্তারিত দেখুন</a>
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Shekherkandi%2C%20Bancharampur%2C%20Bangladesh">📍 ম্যাপে দেখুন</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="details">
+  <div class="container">
+    <h2 class="title">একটি নতুন জীবনের শুরু</h2>
+    <p class="subtitle">
+      পরম করুণাময় আল্লাহর নামে শুরু করছি। দুইটি হৃদয়ের সুন্দর বন্ধনে
+      একটি নতুন জীবনের সূচনা হতে যাচ্ছে। আপনাদের উপস্থিতি, ভালোবাসা ও দোয়া
+      আমাদের এই শুভদিনকে আরও আনন্দময় করে তুলবে।
+    </p>
+    <div class="grid">
+      <div class="card"><div class="icon">🤵</div><h3>বর</h3><div>রহমান মিয়া</div></div>
+      <div class="card"><div class="icon">💍</div><h3>শুভ দিন</h3><div>৩০ নভেম্বর ২০২৬<br>সোমবার</div></div>
+      <div class="card"><div class="icon">👰</div><h3>কনে</h3><div>সুরাইয়া আক্তার</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="title">বিয়ের আর বেশি দেরি নেই</h2>
+    <p class="subtitle">আপনাদের সঙ্গে এই আনন্দের মুহূর্তটি ভাগ করে নেওয়ার অপেক্ষায়।</p>
+    <div class="countdown" id="countdown">
+      <div class="time"><strong id="days">--</strong><span>দিন</span></div>
+      <div class="time"><strong id="hours">--</strong><span>ঘণ্টা</span></div>
+      <div class="time"><strong id="minutes">--</strong><span>মিনিট</span></div>
+      <div class="time"><strong id="seconds">--</strong><span>সেকেন্ড</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">অনুষ্ঠানের তথ্য</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">📅</div><h3>তারিখ</h3><div>৩০ নভেম্বর ২০২৬<br>সোমবার</div></div>
+      <div class="card"><div class="icon">🕑</div><h3>সময়</h3><div>বিকাল ২:০০ ঘটিকায়</div></div>
+      <div class="card"><div class="icon">📍</div><h3>স্থান</h3><div>শেখেরকান্দি<br>বাঞ্ছারামপুর</div></div>
+    </div>
+    <div class="btns">
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Shekherkandi%2C%20Bancharampur%2C%20Bangladesh">📍 Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="quote">
+      “আপনাদের মূল্যবান উপস্থিতি, ভালোবাসা ও দোয়া
+      আমাদের নতুন জীবনের পথচলাকে আরও সুন্দর করে তুলবে।”
+      <br><br><strong style="color:var(--gold2)">আপনাদের সাদর আমন্ত্রণ</strong>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="gallery">
+  <div class="container">
+    <h2 class="title">স্মৃতির পাতা</h2>
+    <p class="subtitle">আপনার প্রিয় ছবি বেছে নিয়ে এখানে যোগ করুন।</p>
+    <div class="upload-box" style="text-align:center">
+      <label class="btn upload-label" for="photoInput">📸 ছবি আপলোড করুন</label>
+      <input id="photoInput" type="file" accept="image/*" multiple>
+      <p style="color:#bdb19a;font-size:.9rem;margin:12px 0 0">ছবিগুলো এই ব্রাউজারে প্রিভিউ ও সংরক্ষিত থাকবে।</p>
+      <div class="preview-grid" id="previewGrid"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="rsvp">
+  <div class="container">
+    <h2 class="title">RSVP</h2>
+    <p class="subtitle">আপনি অনুষ্ঠানে উপস্থিত থাকবেন কি না জানিয়ে দিন।</p>
+    <form class="rsvp" id="rsvpForm">
+      <input id="guestName" required placeholder="আপনার নাম">
+      <select id="attendance" required>
+        <option value="">উপস্থিতির অবস্থা নির্বাচন করুন</option>
+        <option>হ্যাঁ, উপস্থিত থাকব</option>
+        <option>দুঃখিত, উপস্থিত থাকতে পারব না</option>
+      </select>
+      <textarea id="guestNote" placeholder="কোনো বার্তা (ঐচ্ছিক)"></textarea>
+      <button class="btn" type="submit">WhatsApp-এ পাঠান</button>
+    </form>
+  </div>
+</section>
+
+<section class="section alt" id="messages">
+  <div class="container">
+    <h2 class="title">অভিনন্দন ও শুভেচ্ছা</h2>
+    <p class="subtitle">আপনার ভালোবাসার কয়েকটি কথা রেখে যান।</p>
+    <form class="guestbook" id="guestbookForm">
+      <input id="wishName" required placeholder="আপনার নাম">
+      <textarea id="wishText" required placeholder="অভিনন্দন / শুভেচ্ছা লিখুন"></textarea>
+      <button class="btn" type="submit">💌 শুভেচ্ছা পাঠান</button>
+    </form>
+    <div class="guestbook-list" id="guestbookList"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">আমন্ত্রণটি শেয়ার করুন</h2>
+    <p class="subtitle">বন্ধু ও আত্মীয়দের সহজেই WhatsApp-এ আমন্ত্রণ পাঠান।</p>
+    <div class="btns">
+      <button class="btn" onclick="shareInvite()">📤 শেয়ার করুন</button>
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://wa.me/?text=রহমান%20মিয়া%20ও%20সুরাইয়া%20আক্তারের%20শুভ%20বিবাহের%20নিমন্ত্রণ।%20বিস্তারিত%20দেখুন:%20">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  রহমান মিয়া &amp; সুরাইয়া আক্তার · ৩০ নভেম্বর ২০২৬
+  <br>দোয়া করবেন, ভালোবাসায় পাশে থাকবেন। ❤️
+</footer>
+
+<script>
+const wedding = new Date("2026-11-30T14:00:00+06:00").getTime();
+function updateCountdown(){
+  const now = Date.now(), diff = wedding-now;
+  if(diff<=0){
+    document.getElementById("countdown").innerHTML =
+      '<div class="time" style="grid-column:1/-1"><strong>শুভ বিবাহ</strong><span>আজকের শুভদিন</span></div>';
+    return;
+  }
+  document.getElementById("days").textContent=Math.floor(diff/86400000);
+  document.getElementById("hours").textContent=Math.floor(diff/3600000)%24;
+  document.getElementById("minutes").textContent=Math.floor(diff/60000)%60;
+  document.getElementById("seconds").textContent=Math.floor(diff/1000)%60;
+}
+updateCountdown(); setInterval(updateCountdown,1000);
+
+function toggleMusic(){
+  const m=document.getElementById("bgMusic"), b=document.getElementById("musicBtn");
+  if(m.paused){ m.play().then(()=>b.textContent="🔇 Music Off").catch(()=>alert("music/wedding-music.mp3 ফাইলটি যোগ করুন")); }
+  else { m.pause(); b.textContent="🎵 Music"; }
+}
+async function shareInvite(){
+  const data={title:"রহমান & সুরাইয়া — শুভ বিবাহ",text:"শুভ বিবাহের নিমন্ত্রণ — রহমান মিয়া ও সুরাইয়া আক্তার",url:location.href};
+  if(navigator.share){try{await navigator.share(data);}catch(e){}}
+  else {await navigator.clipboard.writeText(location.href); alert("ওয়েবসাইটের লিংক কপি হয়েছে।");}
+}
+document.getElementById("rsvpForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const name=document.getElementById("guestName").value.trim();
+  const status=document.getElementById("attendance").value;
+  const note=document.getElementById("guestNote").value.trim();
+  const message=`Wedding RSVP%0Aনাম: ${encodeURIComponent(name)}%0Aঅবস্থা: ${encodeURIComponent(status)}%0Aবার্তা: ${encodeURIComponent(note || "নেই")}`;
+  const phone=""; // এখানে আপনার WhatsApp নম্বর বসাতে পারবেন, যেমন 9665XXXXXXXX
+  const url=phone ? `https://wa.me/${phone}?text=${message}` : `https://wa.me/?text=${message}`;
+  window.open(url,"_blank");
+});
+
+
+function enterInvitation(){
+  document.getElementById('welcome').classList.add('hide');
+  const m=document.getElementById('bgMusic');
+  m.play().then(()=>document.getElementById('musicBtn').textContent='🔇 Music Off').catch(()=>{});
+}
+window.addEventListener('scroll',()=>{const p=document.getElementById('parallaxBg'); if(p) p.style.transform=`scale(1.08) translateY(${window.scrollY*0.06}px)`;},{passive:true});
+const photoInput=document.getElementById('photoInput'), previewGrid=document.getElementById('previewGrid');
+function renderPhotos(){
+  const files=JSON.parse(localStorage.getItem('weddingPhotos')||'[]');
+  previewGrid.innerHTML=files.map(src=>`<img src="${src}" alt="Guest photo">`).join('');
+}
+photoInput.addEventListener('change',async()=>{
+  const files=[...photoInput.files].slice(0,12); const old=JSON.parse(localStorage.getItem('weddingPhotos')||'[]');
+  for(const f of files){const r=new FileReader();r.onload=e=>{old.push(e.target.result);localStorage.setItem('weddingPhotos',JSON.stringify(old.slice(-24)));renderPhotos()};r.readAsDataURL(f)}
+}); renderPhotos();
+const guestbookForm=document.getElementById('guestbookForm'), guestbookList=document.getElementById('guestbookList');
+function renderWishes(){const arr=JSON.parse(localStorage.getItem('weddingWishes')||'[]');guestbookList.innerHTML=arr.slice().reverse().map(x=>`<div class="guest-message"><b>${escapeHtml(x.name)}</b><br>${escapeHtml(x.text)}</div>`).join('')}
+function escapeHtml(x){return x.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+guestbookForm.addEventListener('submit',e=>{e.preventDefault();const arr=JSON.parse(localStorage.getItem('weddingWishes')||'[]');arr.push({name:document.getElementById('wishName').value.trim(),text:document.getElementById('wishText').value.trim()});localStorage.setItem('weddingWishes',JSON.stringify(arr.slice(-50)));guestbookForm.reset();renderWishes()});renderWishes();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const map = {
+    "রহমান মিয়া": WEDDING.groom,
+    "সুরাইয়া আক্তার": WEDDING.bride,
+    "৩০ নভেম্বর ২০২৬": WEDDING.dateText,
+    "সোমবার": WEDDING.dayText,
+    "বিকাল ২:০০": WEDDING.timeText,
+    "শেখেরকান্দি": WEDDING.venue
+  };
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(n => {
+    let t = n.nodeValue;
+    for (const k in map) t = t.split(k).join(map[k]);
+    n.nodeValue = t;
+  });
+  document.querySelectorAll("a[href*='maps']").forEach(a => a.href = WEDDING.mapLink);
+});
+</script>
+</body>
+</html>

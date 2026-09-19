@@ -1,0 +1,26 @@
+WEDDING WEBSITE — EDIT HERE
+
+১) index.html → Right Click → Open with → Notepad
+২) Ctrl + F চাপুন
+৩) WEDDING = লিখে Search করুন
+৪) নিচের তথ্যগুলো পরিবর্তন করুন:
+   groom = বর-এর নাম
+   bride = কনের নাম
+   dateText = তারিখ
+   dayText = বার
+   timeText = সময়
+   venue = অনুষ্ঠানস্থল
+   address = ঠিকানা
+   whatsapp = WhatsApp নম্বর
+   musicFile = গানের ফাইল
+   mapLink = Google Maps লিংক
+   countdown = কাউন্টডাউনের তারিখ/সময়
+
+Saudi WhatsApp উদাহরণ:
+whatsapp: "9665XXXXXXXX"
+
+গান:
+music ফোল্ডারে wedding-music.mp3 রাখুন।
+
+পরিবর্তনের পর Ctrl + S চাপুন।
+তারপর index.html-এ Double Click করে ওয়েবসাইট দেখুন।
