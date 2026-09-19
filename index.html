@@ -326,7 +326,7 @@ document.getElementById("rsvpForm").addEventListener("submit",function(e){
   const status=document.getElementById("attendance").value;
   const note=document.getElementById("guestNote").value.trim();
   const message=`Wedding RSVP%0Aনাম: ${encodeURIComponent(name)}%0Aঅবস্থা: ${encodeURIComponent(status)}%0Aবার্তা: ${encodeURIComponent(note || "নেই")}`;
-  const phone=""; // এখানে আপনার WhatsApp নম্বর বসাতে পারবেন, যেমন 9665XXXXXXXX
+  const phone=""; // এখানে আপনার WhatsApp নম্বর বসাতে পারবেন, যেমন 0539557467
   const url=phone ? `https://wa.me/${phone}?text=${message}` : `https://wa.me/?text=${message}`;
   window.open(url,"_blank");
 });
