@@ -157,7 +157,7 @@ body:after{content:"";position:fixed;inset:0;z-index:-3;background-image:linear-
 <audio id="bgMusic" loop preload="none">
   <source src="./Videos2026-09-19_125038_028.mp3" type="audio/mpeg">
 </audio>
-<!-- Background music disabled as requested -->
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵 Music</button>
 
 
 <header class="hero" id="home">
@@ -312,7 +312,12 @@ updateCountdown(); setInterval(updateCountdown,1000);
 
 function toggleMusic(){
   const m=document.getElementById("bgMusic"), b=document.getElementById("musicBtn");
-  m.pause(); m.currentTime=0;
+  if(!m||!b)return;
+  if(m.paused){
+    m.play().then(()=>b.textContent="🔇 Music Off").catch(()=>{});
+  }else{
+    m.pause();m.currentTime=0;b.textContent="🎵 Music";
+  }
 }
 async function shareInvite(){
   const data={title:"রহমান & সুরাইয়া — শুভ বিবাহ",text:"শুভ বিবাহের নিমন্ত্রণ — রহমান মিয়া ও সুরাইয়া আক্তার",url:location.href};
@@ -334,7 +339,7 @@ document.getElementById("rsvpForm").addEventListener("submit",function(e){
 function enterInvitation(){
   document.getElementById('welcome').classList.add('hide');
   const m=document.getElementById('bgMusic');
-  m.play().then(()=>document.getElementById('musicBtn').textContent='🔇 Music Off').catch(()=>{});
+  if(m){m.pause();m.currentTime=0;}
 }
 window.addEventListener('scroll',()=>{const p=document.getElementById('parallaxBg'); if(p) p.style.transform=`scale(1.08) translateY(${window.scrollY*0.06}px)`;},{passive:true});
 const photoInput=document.getElementById('photoInput'), previewGrid=document.getElementById('previewGrid');
